@@ -5,9 +5,9 @@
     "version": "0.4.0",
     "homepage": "https://github.com/theodi/adapt-theme-dlab/",
     "issues": "https://github.com/theodi/adapt-theme-dlab/issues",
-    "displayName": "Lloyds of London",
-    "theme": "Lloyds of London",
-    "description": "A custom theme for Lloyds of London modules",
+    "displayName": "dLab",
+    "theme": "dLab",
+    "description": "A custom theme for dLab modules",
     "main": "js/dlab.js",
     "keywords": [
         "adapt-plugin",
