@@ -1,0 +1,24 @@
+{
+    "name": "adapt-theme-dlab",
+    "repository": "git@github.com:theodi/adapt-theme-dlab.git",
+    "framework": "^2.0.0",
+    "version": "0.4.0",
+    "homepage": "https://github.com/theodi/adapt-theme-dlab/",
+    "issues": "https://github.com/theodi/adapt-theme-dlab/issues",
+    "displayName": "Lloyds of London",
+    "theme": "Lloyds of London",
+    "description": "A custom theme for Lloyds of London modules",
+    "main": "js/dlab.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-theme"
+    ],
+    "licendlab": "GPLv3",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
