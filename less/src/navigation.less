@@ -106,12 +106,58 @@
     position: relative;
     margin: 0px;
 }
+.select-input {
+    padding: 5px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: gray;
+    width: 62%;
+    @media all and (max-width:(@device-width-medium - 1px)) {
+        width: 84%;
+        display: block;
+        font-size: 1em;
+    }
+}
+.name-input {
+    padding: 5px;
+    font-size: 1.5em;
+    color: gray;
+    width: 250px;
+    margin: 10px;
+    @media all and (max-width:(@device-width-medium - 1px)) {
+        width: 80%;
+        margin: 0px;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 1em;
+    }
+}
 .email-input {
     padding: 5px;
     font-size: 1.5em;
     color: gray;
-    width: 50%;
+    width: 250px;
+    margin-bottom: 10px;
+    width: 60%;
     @media all and (max-width:(@device-width-medium - 1px)) {
         width: 80%;
+        display: block;
+        font-size: 1em;
+    }
+}
+#countries, #region {
+    padding: 5px;
+    color: gray;
+    margin: 10px;
+}
+#countries_msdd, #region_msdd {
+    width: 62%;
+    @media all and (max-width:(@device-width-medium - 1px)) {
+        width: 84%;
+    }
+}
+.dd .ddTitle .ddTitleText {
+    @media all and (max-width:(@device-width-medium - 1px)) {
+        font-size: 1em;
     }
 }
