@@ -5,7 +5,6 @@
 
 	.menu-container {
 		width: 100%;
-		padding-top: 34px;
 	}
 
 	.menu-container-inner {
@@ -13,10 +12,7 @@
 	}
 
 	.menu-header {
-		display: none;
 		margin-bottom: -30px;
-		background: url('assets/blobs.png');
-		background-size: cover;
 		background-color: @menu-header-background-color;
     		@media all and (max-width:(@device-width-medium - 1px)) {
 			margin-bottom: 10px;
@@ -30,7 +26,7 @@
 		text-align: left;
 
         	@media all and (max-width: (@device-width-large + 20px)) {
-	            padding: (@menu-header-padding-top / 2) 20px (@menu-header-padding-bottom / 2);
+	            padding: 20px 10px 20px;
 	        }
 
 	        @media all and (max-width: (@device-width-small + 20px)) {
@@ -39,13 +35,11 @@
 	}
 
 	.menu-title {
-		display: none;
 		margin: @menu-block-title-margin-top 0 @menu-block-title-margin-bottom;
-		color: @foreground-color-inverted;
+		color: #111;
 	}
 	.menu-title-inner {
 		padding-top: 10px;
-		background: black;
 		display: inline;
    		line-height: 1.4em;
 	        padding-bottom: 10px;
@@ -58,11 +52,10 @@
 	}
 	.menu-body {
 		margin: @menu-block-body-margin-bottom 0;
-		color: @foreground-color-inverted;
+		color: #111;
 	}
 	.menu-body-inner p {
 		padding-top: 10px;
-		background: black;
 		display: inline-block;
    		line-height: 1.6em;
 	        padding-bottom: 10px;
@@ -84,7 +77,7 @@
 
 		&.nth-child-even{
 			.menu-item-inner{
-				background-color: @odi-color-five;
+				background-color: @odi-color-one;
 				margin-left:2%;
 		        .dir-rtl & {
 		            margin-right:2%;
@@ -94,7 +87,7 @@
 
 		&.nth-child-odd {
 			.menu-item-inner {
-				background-color: @odi-color-two;
+				background-color: @odi-color-one;
 				margin-right:2%;
                 .dir-rtl & {
                     margin-left:2%;
@@ -103,7 +96,7 @@
 		}
 		&.nth-child-3, &.nth-child-7, &.nth-child-11 {
 			.menu-item-inner {
-				background-color: @odi-color-nine;
+				background-color: @odi-color-one;
 			}
 		}
 		&.nth-child-4, &.nth-child-8, &.nth-child-12 {
@@ -202,16 +195,16 @@
 		
 		button {
 			padding: @button-padding-top (@button-padding-right*2) @button-padding-bottom (@button-padding-left*2);
-			background-color:darken(@button-color, 20%);
+			background-color:darken(@menu-button-color, 20%);
 			color:@button-text-color;
 			
 			&:hover {
-				background-color:darken(@button-color, 30%);
+				background-color:darken(@menu-button-color, 30%);
 				color:@button-text-color-hover;
 			}
 			
 			&.visited {
-				background-color:darken(@button-color, 20%);
+				background-color:darken(@menu-button-color, 20%);
 				color:@button-text-color-disabled;
 			}
 		}
