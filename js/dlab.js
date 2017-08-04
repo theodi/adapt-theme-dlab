@@ -6,6 +6,8 @@ define(function(require) {
 	var ThemeBlock = require('theme/adapt-theme-dlab/js/theme-block');
 	var msjquery = require('theme/adapt-theme-dlab/js/jquery.dd.js');
 	var emailPresent = false;
+	var pageID = "pageID";
+	var detailsRequested = false;
 
 	// Block View
 	// ==========
@@ -29,9 +31,27 @@ define(function(require) {
 		$('.intro-logo .graphic-widget img').attr('data-small','adapt/css/assets/intro-logo.png');
 	});
 
+	Adapt.on('router:page', function(target) {
+		pageID = target.get('_trackingHub')._pageID || target.get('_id') || null;
+	});
+
+	Adapt.on('tutor:opened', function(target) {
+		if (pageID != "ODI_1" && detailsRequested) {
+			$('.notify-popup-inner button :first').parent().hide();
+		}
+	});
+	
+	Adapt.on('tutor:closed', function(target) {
+		detailsRequested = false;
+	});
+
 	Adapt.on('userDetails:updated', function(user) {
 		emailSave(user);
 		emailPresent = true;
+	});
+	
+	Adapt.on('userDetails:invalid', function(user) {
+		checkWelcome(user);
 	});
 
 	Adapt.on('trackingHub:saving', function() {
@@ -68,7 +88,7 @@ define(function(require) {
 	var click_bind = false;
 
 	function showMessage(phraseId) {
-		console.log("In show message");
+		detailsRequested = true;
 		
 		var alertObject = {
             title: "Save your progress, learn anywhere...",
@@ -114,7 +134,7 @@ define(function(require) {
 	function checkWelcome(user) {
 		if (!user.email && !localStorage.getItem("ODI_Welcome_Done")) {
 			showMessage('enter_email');
-			localStorage.setItem("ODI_Welcome_Done",true);
+			//localStorage.setItem("ODI_Welcome_Done",true);
 		}
 	}
 
@@ -167,6 +187,8 @@ function getUser() {
 	user.gender = $("#gender").val();
 	if (validateInput(user)) {
 		Adapt.trigger('userDetails:updated',user);
+	} else {
+		Adapt.trigger('userDetails:invalid',user);
 	}
 }
 
