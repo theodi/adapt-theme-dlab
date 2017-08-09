@@ -32,7 +32,11 @@ define(function(require) {
 	});
 
 	Adapt.on('router:page', function(target) {
-		pageID = target.get('_trackingHub')._pageID || target.get('_id') || null;
+		if (target.get('_trackingHub') ) {	
+			pageID = target.get('_trackingHub')._pageID || target.get('_id') || null;
+		} else {
+			pageID = target.get('_id') || null;
+		}
 	});
 
 	Adapt.on('tutor:opened', function(target) {
