@@ -2,7 +2,7 @@
     "name": "adapt-theme-dlab",
     "repository": "git@github.com:theodi/adapt-theme-dlab.git",
     "framework": "^2.0.0",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "homepage": "https://github.com/theodi/adapt-theme-dlab/",
     "issues": "https://github.com/theodi/adapt-theme-dlab/issues",
     "displayName": "dLab",
