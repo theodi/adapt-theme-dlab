@@ -18,9 +18,23 @@ body {
 .icon-home {
 	padding-right: 0;
 	float: left;
+	display: none;
+}
+.navigation-back-button {
+	display: none;
 }
 .about-credit p {
 	display: inline;
+}
+.hotgraphic-component .hotgraphic-item-graphic {
+	@media all and (min-width: @device-width-medium) {
+		display: none;	
+	}
+}
+.hotgraphic-component .hotgraphic-item-content {
+	@media all and (min-width: @device-width-medium) {
+		width: 100%;	
+	}
 }
 .menu {
 	.menu-item {
@@ -39,6 +53,9 @@ body {
     bottom: 2.5em;
     padding: 3px;
     color: white;
+}
+a {
+	color: inherit;
 }
 .graphic-attribution a {
     color: white;
@@ -175,7 +192,7 @@ h5 {
 			}
 			.graphic-inner img {
 				content: url("assets/intro-logo.png");
-				max-height: 290px;
+				max-height: 200px;
 			}
 			.graphic-attribution {
 				display: none;
@@ -303,6 +320,13 @@ h5 {
 		.buttons button {
 			background-color: @odi-color-one;
 		}
+		.button, button {
+			background-color: @odi-color-one;
+			color: white;
+			a {
+				color: white;
+			}
+		}
 	}
 	&.color-two {
 		.graphic-component {
@@ -361,6 +385,13 @@ h5 {
 		}
 		.buttons button {
 			background-color: @odi-color-two;
+		}
+		.button, button {
+			background-color: @odi-color-two;
+			color: white;
+			a {
+				color: white;
+			}
 		}
 	}
 	&.color-three {
@@ -421,6 +452,13 @@ h5 {
 		.buttons button {
 			background-color: @odi-color-three;
 		}
+		.button, button {
+			background-color: @odi-color-three;
+			color: white;
+			a {
+				color: white;
+			}
+		}
 	}
 	&.color-four {
 		.graphic-component {
@@ -480,6 +518,14 @@ h5 {
 		.buttons button {
 			background-color: @odi-color-four;
 		}
+		.button, button {
+			background-color: @odi-color-four;
+			color: white;
+			a {
+				color: white;
+			}
+		}
+	
 	}
 	&.color-five {
 		.graphic-component {
@@ -538,6 +584,13 @@ h5 {
 		}
 		.buttons button {
 			background-color: @odi-color-five;
+		}
+		.button, button {
+			background-color: @odi-color-five;
+			color: white;
+			a {
+				color: white;
+			}
 		}
 	}
 	&.color-six {
@@ -598,6 +651,13 @@ h5 {
 		.buttons button {
 			background-color: @odi-color-six;
 		}
+		.button, button {
+			background-color: @odi-color-six;
+			color: white;
+			a {
+				color: white;
+			}
+		}
 	}
 	&.color-seven {
 		.graphic-component {
@@ -656,6 +716,13 @@ h5 {
 		}
 		.buttons button {
 			background-color: @odi-color-seven;
+		}
+		.button, button {
+			background-color: @odi-color-seven;
+			color: white;
+			a {
+				color: white;
+			}
 		}
 	}
 	&.color-eight {
@@ -716,6 +783,13 @@ h5 {
 		.buttons button {
 			background-color: @odi-color-eight;
 		}
+		.button, button {
+			background-color: @odi-color-eight;
+			color: white;
+			a {
+				color: white;
+			}
+		}
 	}
 	&.color-nine {
 		.graphic-component {
@@ -774,6 +848,13 @@ h5 {
 		}
 		.buttons button {
 			background-color: @odi-color-nine;
+		}
+		.button, button {
+			background-color: @odi-color-nine;
+			color: white;
+			a {
+				color: white;
+			}
 		}
 	}
 	&.color-ten {
@@ -834,13 +915,20 @@ h5 {
 		.buttons button {
 			background-color: @odi-color-ten;
 		}
+		.button, button {
+			background-color: @odi-color-ten;
+			color: white;
+			a {
+				color: white;
+			}
+		}
 	}
 	&.inverted {
 		a, a:hover, a:visited {
 			color: @primary-color-inverted;
 		}
 		.buttons button {
-			background-color: @primary-color-inverted;
+			background-color: @white;
 		}
 		.narrative-component .narrative-progress {
 			background-color: @primary-color-inverted;
@@ -901,7 +989,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-one;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-one;
+			}
+			.buttons button a {
 				color: @odi-color-one;
 			}
 		}
@@ -922,7 +1014,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-two;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-two;
+			}
+			.buttons button a {
 				color: @odi-color-two;
 			}
 		}
@@ -943,7 +1039,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-three;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-three;
+			}
+			.buttons button a {
 				color: @odi-color-three;
 			}
 		}
@@ -964,7 +1064,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-four;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-four;
+			}
+			.buttons button a {
 				color: @odi-color-four;
 			}
 		}
@@ -985,7 +1089,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-five;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-five;
+			}
+			.buttons button a {
 				color: @odi-color-five;
 			}
 		}
@@ -1006,7 +1114,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-six;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-six;
+			}
+			.buttons button a {
 				color: @odi-color-six;
 			}
 		}
@@ -1027,7 +1139,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-seven;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-seven;
+			}
+			.buttons button a {
 				color: @odi-color-seven;
 			}
 		}
@@ -1048,7 +1164,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-eight;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-eight;
+			}
+			.buttons button a {
 				color: @odi-color-eight;
 			}
 		}
@@ -1069,7 +1189,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-nine;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-nine;
+			}
+			.buttons button a {
 				color: @odi-color-nine;
 			}
 		}
@@ -1090,7 +1214,11 @@ h5 {
 			.mcq-answer-icon.checkbox {
 				border: 3px solid @odi-color-ten;
 			}
-			.buttons button {
+			.button {
+				background-color: @white;
+				color: @odi-color-ten;
+			}
+			.buttons button a {
 				color: @odi-color-ten;
 			}
 		}
